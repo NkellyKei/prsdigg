@@ -1,0 +1,26 @@
+query AdminArticleSnapshotConnection($articleUuid: String, $after: String) {
+  adminArticleSnapshotConnection(articleUuid: $articleUuid, after: $after) {
+    nodes {
+      id
+      state
+      articleUuid
+      fileHash
+      txId
+      signatureUrl
+      article {
+        uuid
+        title
+        author {
+          name
+        }
+      }
+      requestedAt
+      signedAt
+      createdAt
+    }
+    pageInfo {
+      hasNextPage
+      endCursor
+    }
+  }
+}

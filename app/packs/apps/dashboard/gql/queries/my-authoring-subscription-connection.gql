@@ -1,0 +1,19 @@
+query MyAuthoringSubscriptionConnection($after: String) {
+  myAuthoringSubscriptionConnection(after: $after) {
+    nodes {
+      id
+      mixinId
+      name
+      avatarUrl
+      bio
+      statistics {
+        articlesCount
+        authorRevenueTotalUsd
+      }
+    }
+    pageInfo {
+      hasNextPage
+      endCursor
+    }
+  }
+}

@@ -1,0 +1,2 @@
+(self.webpackChunkprsdigg=self.webpackChunkprsdigg||[]).push([[3748],{83748:function(e,n,r){"use strict";r.r(n),r.d(n,{default:function(){return s}});var t=r(67294),u=r(12104),c=r(64478);function s(){var e=(0,c.$)().t;return t.createElement("div",{style:{marginTop:20}},t.createElement(u.ZP.Markdown,{source:e("rules_content")}))}}}]);
+//# sourceMappingURL=3748-8e8ac4f5f12b3d12f156.chunk.js.map

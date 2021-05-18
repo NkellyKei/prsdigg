@@ -1,0 +1,42 @@
+query AdminTransferConnection(
+  $itemId: ID
+  $itemType: String
+  $souceId: ID
+  $souceType: String
+  $after: String
+) {
+  adminTransferConnection(
+    itemId: $itemId
+    itemType: $itemType
+    sourceId: $souceId
+    sourceType: $souceType
+    after: $after
+  ) {
+    nodes {
+      traceId
+      snapshotId
+      amount
+      memo
+      transferType
+      assetId
+      opponentId
+      walletId
+      recipient {
+        name
+        avatarUrl
+        mixinId
+      }
+      currency {
+        assetId
+        iconUrl
+        symbol
+      }
+      processedAt
+      createdAt
+    }
+    pageInfo {
+      hasNextPage
+      endCursor
+    }
+  }
+}

@@ -1,0 +1,33 @@
+query AdminUserConnection(
+  $query: String
+  $orderBy: String
+  $filter: String
+  $after: String
+) {
+  adminUserConnection(
+    query: $query
+    orderBy: $orderBy
+    filter: $filter
+    after: $after
+  ) {
+    nodes {
+      id
+      name
+      mixinId
+      mixinUuid
+      avatarUrl
+      statistics {
+        articlesCount
+        commentsCount
+        revenueTotalUsd
+        paymentTotalUsd
+      }
+      createdAt
+      bannedAt
+    }
+    pageInfo {
+      hasNextPage
+      endCursor
+    }
+  }
+}

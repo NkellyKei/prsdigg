@@ -1,0 +1,29 @@
+query AdminPaymentConnection($after: String) {
+  adminPaymentConnection(after: $after) {
+    nodes {
+      traceId
+      snapshotId
+      amount
+      state
+      assetId
+      payer {
+        name
+        mixinId
+        avatarUrl
+      }
+      order {
+        orderType
+      }
+      currency {
+        assetId
+        iconUrl
+        symbol
+      }
+      createdAt
+    }
+    pageInfo {
+      hasNextPage
+      endCursor
+    }
+  }
+}

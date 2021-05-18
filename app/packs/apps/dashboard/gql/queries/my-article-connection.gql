@@ -1,0 +1,22 @@
+query MyArticleConnection($type: String!, $state: String, $after: String) {
+  myArticleConnection(type: $type, state: $state, after: $after) {
+    nodes {
+      uuid
+      title
+      intro
+      price
+      revenue
+      ordersCount
+      state
+      author {
+        name
+        avatarUrl
+      }
+      createdAt
+    }
+    pageInfo {
+      hasNextPage
+      endCursor
+    }
+  }
+}

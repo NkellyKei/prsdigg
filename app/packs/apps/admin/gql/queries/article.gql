@@ -1,0 +1,19 @@
+query AdminArticle($uuid: ID!) {
+  adminArticle(uuid: $uuid) {
+    id
+    uuid
+    title
+    intro
+    price
+    revenue
+    ordersCount
+    commentsCount
+    state
+    walletId
+    author {
+      name
+      avatarUrl
+    }
+    createdAt
+  }
+}

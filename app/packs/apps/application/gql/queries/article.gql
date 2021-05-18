@@ -1,0 +1,69 @@
+query Article($uuid: ID!) {
+  article(uuid: $uuid) {
+    id
+    uuid
+    title
+    intro
+    content
+    price
+    priceUsd
+    assetId
+    authorized
+    ordersCount
+    commentsCount
+    myShare
+    revenue
+    commentingSubscribed
+    paymentTraceId
+    upvoted
+    downvoted
+    upvotesCount
+    downvotesCount
+    wordsCount
+    partialContent
+    walletId
+    swappable
+    signatureUrl
+    tags {
+      id
+      name
+      color
+    }
+    author {
+      name
+      avatarUrl
+      mixinId
+      bio
+    }
+    randomReaders {
+      name
+      avatarUrl
+      mixinId
+    }
+    readers {
+      totalCount
+    }
+    buyOrders {
+      totalCount
+    }
+    rewardOrders {
+      totalCount
+    }
+    currency {
+      assetId
+      symbol
+      iconUrl
+      priceUsd
+    }
+    createdAt
+  }
+  swappableCurrencies {
+    id
+    assetId
+    name
+    symbol
+    iconUrl
+    priceUsd
+    priceBtc
+  }
+}
